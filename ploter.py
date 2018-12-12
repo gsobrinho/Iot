@@ -31,7 +31,7 @@ class dataHandler():
 		return self.__data
 
 	#dado um array com valores inteiros entre 0 e 23 gera histogramas
-	def dataPloter(self, titulo):
+	def dataPloter(self, titulo, cor):
 		arr = self.data
 		N = 23
 		bottom = 0
@@ -48,7 +48,7 @@ class dataHandler():
 		# make a polar plot
 		plt.figure(figsize = (12, 8))
 		ax = plt.subplot(111, polar=True)
-		bars = ax.bar(theta, radii, width=width, bottom=bottom, color="red" )
+		bars = ax.bar(theta, radii, width=width, bottom=bottom, color=cor )
 
 		# set the lable go clockwise and start from the top
 		ax.set_theta_zero_location("N")
